@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> <!--Para ícones-->
+  <!--CSS do leaflet - permite criar mapas interativos-->
+  <link rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin="">
+  <link rel="stylesheet" href="css/style_geral.css">
+  <link rel="stylesheet" href="css/pontos_coleta.css">
+  <title>E-Cosystem | Pontos de coleta</title>
+</head>
+<body id="topo">
+  <!--Menu principal-->
+  <header class="header">
+    <div class="container navbar">
+      <!-- Logo do site -->
+      <a href="index.html" class="logo">
+        <img src="imagens/logo.png" alt="E-Cosystem | Lixo eletrônico e sustentabilidade">
+      </a>
+      <nav class="menu" aria-label="Menu principal">
+        <a href="index.html" >Início</a> <!-- A opção do menu ficará destacada de acordo com a página em que o usuário estiver-->
+        <a href="pontos_coleta.html" class="active">Pontos de coleta</a>
+        <a href="quem_somos.html">Quem somos</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!--Conteúdo principal do site-->
+  <main>
+    <!--Faixa de título da página-->
+    <section class="pagina_titulo">
+      <div class="container">
+        <h1>Pontos de coleta</h1>
+        <p>
+          Encontre locais adequados para descartar seus resíduos eletrônicos.
+        </p>
+      </div>
+    </section>
+
+    <!--Introduçao-->
+    <section class="section container">
+      <div class="section_cabecalho_coleta">
+        <span class="subtitulo">DESCARTE CORRETAMENTE</span>
+        <h2>Onde descartar seu lixo eletrônico?</h2>
+        <p>
+          Aparelhos eletrônicos que não possuem mais utilidade não devem ser descartados junto ao lixo doméstico comum. Para garantir uma destinação adequada, é importante procurar estabelecimentos e pontos de recebimento que participam de iniciativas de coleta e logística reversa.
+        </p>
+      </div>
+    </section>
+
+    <!--Mapa-->
+    <section class="section section_fundo_cinza" id="mapa_section">
+      <div class="container">
+        <div class="section_cabecalho">
+          <span class="subtitulo">EXPLORE A REGIÃO</span>
+          <h2>Mapa dos pontos de coleta</h2>
+          <p>
+            Confira no mapa a localização dos estabelecimentos
+            identificados em Açailândia - MA.
+          </p>
+        </div>
+        <!--Area reservada para o leaflet-->
+        <div class="mapa_container">
+          <div id="mapa_leaflet">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--Lista de pontos de coleta-->
+    <section class="section container" id="locais">
+      <div class="section_cabecalho">
+        <span class="subtitulo">LOCAIS DISPONÍVEIS</span>
+        <h2>Pontos de coleta em Açailândia</h2>
+        <p>
+          Conheça alguns estabelecimentos e locais identificados como possíveis pontos de recebimento de resíduos eletrônicos no município.
+        </p>
+      </div>
+      <!--Aviso-->
+      <div class="locais_aviso">
+        <i class="fa-solid fa-circle-info"></i>
+        <p>
+          Antes de se deslocar, entre em contato com o estabelecimento para confirmar se o recebimento de resíduos eletrônicos está disponível e quais materiais são aceitos.
+        </p>
+      </div>
+
+      <!--Grid dos locais de coleeta-->
+      <div class="locais_grid">
+        
+        <!--Câmara municipal-->
+        <article class="local_card">
+          <div class="local_icone">
+            <i class="fa-solid fa-landmark"></i>
+          </div>
+          <div class="local_info">
+            <span class="local_categoria">
+              Instituição pública
+            </span>
+            <h3>Câmara Municipal de Açailândia</h3>
+            <p class="local_endereco">
+              <i class="fa-solid fa-location-dot"></i>
+              Rua Ceará, 662 - Centro, Açailândia - MA.
+            </p>
+            <p class="local_numero">
+              <i class="fa-solid fa-phone"></i>
+              (99) 98151-5350
+            </p>
+            <span class="local_porte porte_todos">
+              Equipamentos de grande e pequeno porte
+            </span>
+            <p class="local_observacao">
+              Coletor de resíduos eletroeletrônicos da GREEN Eletron instalado próximo ao portão de estacionamento. Aceita equipamentos de grande e pequeno porte. Consulte a disponibilidade de coleta.
+            </p>
+            <span class="local_horario">
+              <i class="fa-regular fa-clock"></i>
+              Consulte o estabelecimento.
+            </span>
+          </div>
+        </article>
+        <!--Loja vivo-->
+        <article class="local_card">
+          <div class="local_icone">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <div class="local_info">
+            <span class="local_categoria">
+              Estabelecimento comercial
+            </span>
+            <h3>Loja Vivo</h3>
+            <p class="local_endereco">
+              <i class="fa-solid fa-location-dot"></i>
+              Rua Duque de Caxias, 946, Quadra 92 - Centro, Açailândia - MA.
+            </p>
+            <p class="local_email">
+              <i class="fa-solid fa-envelope"></i>
+              coleta@abree.org.br
+            </p>
+            <p class="local_numero">
+              <i class="fa-solid fa-phone"></i>
+              ABREE: (11) 97811-6126 e (11) 98991-4558
+            </p>
+            <span class="local_porte porte_pequeno">
+              Equipamentos de pequeno porte
+            </span>
+            <p class="local_observacao">
+              Recebimento de equipamentos eletrônicos de pequeno porte como celulares, carregadores, fones de ouvido, pilhas, baterias e produtos de telefonia em geral. Consulte a disponibilidade de coleta.
+            </p>
+            <span class="local_horario">
+              <i class="fa-regular fa-clock"></i>
+              <div class="local_horario_info">
+                <p>Segunda a sexta-feira: das 08:00 às 18:00</p>
+                <p>Sábado: das 08:00 às 13:00</p>
+              </div>
+            </span>
+          </div>
+        </article>
+        <!--Supermercado mateus-->
+        <article class="local_card">
+          <div class="local_icone">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </div>
+          <div class="local_info">
+            <span class="local_categoria">
+              Estabelecimento comercial
+            </span>
+            <h3>Supermercado Mateus</h3>
+            <p class="local_endereco">
+              <i class="fa-solid fa-location-dot"></i>
+              Rua Dorgival Pinheiro de Souza, 800 - Centro,
+              Açailândia - MA.
+            </p>
+            <p class="local_numero">
+              <i class="fa-solid fa-phone"></i>
+              (98) 99202-0090
+            </p>
+            <span class="local_porte porte_pequeno">
+              Equipamentos de pequeno porte
+            </span>
+            <p class="local_observacao">
+              Recebimento de equipamentos eletrônicos de pequeno porte como celulares, carregadores, cabos, adaptadores USB, relógios smart, mouse e etc. Consulte a disponibilidade de coleta.
+            </p>
+            <span class="local_horario">
+              <i class="fa-regular fa-clock"></i>
+              <div class="local_horario_info">
+                <p>Segunda a sábado: das 07:00 às 22:00</p>
+                <p>Domingo: das 07:00 às 14:00</p>
+              </div>
+            </span>
+          </div>
+        </article>
+        <!--Magazine luiza-->
+        <article class="local_card">
+          <div class="local_icone">
+            <i class="fa-solid fa-store"></i>
+          </div>
+          <div class="local_info">
+            <span class="local_categoria">
+              Estabelecimento comercial
+            </span>
+            <h3>Magazine Luiza - Filial 1240</h3>
+            <p class="local_endereco">
+              <i class="fa-solid fa-location-dot"></i>
+              Avenida Desembargador Tácito Caldas, 203 -
+              Centro, Açailândia - MA.
+            </p>
+            <p class="local_numero">
+              <i class="fa-solid fa-phone"></i>
+              (99) 93300-5648
+            </p>
+            <span class="local_porte porte_pequeno">
+              Equipamentos de pequeno porte
+            </span>
+            <p class="local_observacao">
+              Recebimento de equipamentos eletrônicos de pequeno porte como celulares, carregadores, cabos, adaptadores USB, relógios smart, mouse e etc. Consulte a disponibilidade de coleta.
+            </p>
+            <span class="local_horario">
+              <i class="fa-regular fa-clock"></i>
+              <div class="local_horario_info">
+                <p>Segunda a sexta-feira: das 08:00 às 18:00</p>
+                <p>Sábado: das 08:00 às 15:30</p>
+                <p>Domingo: das 08:00 às 13:00</p>
+              </div>
+            </span>
+          </div>
+        </article>
+        <!--UEMASUL-->
+        <article class="local_card">
+          <div class="local_icone">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div class="local_info">
+            <span class="local_categoria">
+              Instituição de ensino
+            </span>
+            <h3>UEMASUL - Campus Açailândia</h3>
+            <p class="local_endereco">
+              <i class="fa-solid fa-location-dot"></i>
+              Rua Topázio, 100 - Açailândia - MA.
+            </p>
+            <p class="local_email">
+              <i class="fa-solid fa-envelope"></i>
+              cchstl@uemasul.edu.br
+            </p>
+            <p class="local_numero">
+              <i class="fa-solid fa-phone"></i>
+              (99) 3538-4509
+            </p>
+            <span class="local_porte porte_todos">
+              Equipamentos de grande e pequeno porte
+            </span>
+            <p class="local_observacao">
+              Instituição participante de iniciativa de coleta de resíduos eletroeletrônicos da GREEN Eletron. Aceita equipamentos de todos os portes. Consulte a disponibilidade de coleta.
+            </p>
+            <span class="local_horario">
+              <i class="fa-regular fa-clock"></i>
+              <div class="local_horario_info">
+                <p>Segunda a sexta-feira: das 08:00 às 22:00</p>
+              </div>
+            </span>
+          </div>
+        </article>
+        <!--Prefeitura-->
+        <article class="local_card">
+          <div class="local_icone">
+            <i class="fa-solid fa-landmark"></i>
+          </div>
+          <div class="local_info">
+            <span class="local_categoria">
+              Instituição pública
+            </span>
+            <h3>Prefeitura Municipal de Açailândia</h3>
+            <p class="local_endereco">
+              <i class="fa-solid fa-location-dot"></i>
+              Avenida Santa Luzia, s/n - Açailândia - MA.
+            </p>
+            <p class="local_numero">
+              <i class="fa-solid fa-phone"></i>
+              (99) 3538-8666
+            </p>
+            <span class="local_porte porte_todos">
+              Equipamentos de grande e pequeno porte
+            </span>
+            <p class="local_observacao">
+              Local indicado em listagem de pontos de recebimento da GREEN Eletron. Aceita equipamentos de grande e pequeno porte. Consulte a disponibilidade de coleta.
+            </p>
+            <span class="local_horario">
+              <i class="fa-regular fa-clock"></i>
+              <div class="local_horario_info">
+                <p>Segunda a sexta-feira: das 08:00 às 14:00</p>
+              </div>
+            </span>
+          </div>
+        </article>
+        <!--Secretaria de meio ambiente -->
+        <article class="local_card">
+          <div class="local_icone">
+            <i class="fa-solid fa-leaf"></i>
+          </div>
+          <div class="local_info">
+            <span class="local_categoria">Órgão ambiental</span>
+            <h3>Secretaria Municipal de Meio Ambiente</h3>
+            <p class="local_endereco">
+              <i class="fa-solid fa-location-dot"></i>
+              Rua Raimundo Pimentel Filho, 78 -
+              Açailândia - MA.
+            </p>
+            <p class="local_numero">
+              <i class="fa-solid fa-phone"></i>
+              (99) 99211-3194
+            </p>
+            <span class="local_porte porte_todos">
+              Equipamentos de grande e pequeno porte
+            </span>
+            <p class="local_observacao">
+              Local indicado em listagem de pontos de recebimento da GREEN Eletron. Aceita equipamentos de grande e pequeno porte. Consulte a disponibilidade de coleta.
+            </p>
+            <span class="local_horario">
+              <i class="fa-regular fa-clock"></i>
+              <div class="local_horario_info">
+                <p>Segunda a sexta-feira: das 08:00 às 14:00</p>
+              </div>
+            </span>
+          </div>
+        </article>
+        <!--Correios-->
+        <article class="local_card">
+          <div class="local_icone">
+            <i class="fa-solid fa-envelopes-bulk"></i>
+          </div>
+          <div class="local_info">
+            <span class="local_categoria">Agência dos Correios</span>
+            <h3>AC Açailândia</h3>
+            <p class="local_endereco">
+              <i class="fa-solid fa-location-dot"></i>
+              Rua Bom Jesus, 307 - Centro, Açailândia - MA.
+            </p>
+            <p class="local_numero">
+              <i class="fa-solid fa-phone"></i>
+              (99) 3538-1110
+            </p>
+            <span class="local_porte porte_pequeno">
+              Equipamentos de pequeno porte
+            </span>
+            <p class="local_observacao">
+              Utilize o sistema de logística reversa da ABREE. Você receberá um código e indicações de como embalar e levar seu(s) eletroeletrônico(s) até a unidade. Aceita equipamentos de pequeno porte. Consulte a disponibilidade de coleta.
+            </p>
+            <span class="local_horario">
+              <i class="fa-regular fa-clock"></i>
+              <div class="local_horario_info">
+                <p>
+                  Segunda a sexta-feira: das 08:00 às 12:00 e das 14:00 às 17:00
+                </p>
+              </div>
+            </span>
+          </div>
+        </article>
+
+      </div>
+      <!--Fim grid dos locais-->
+    </section>
+
+    <!-- Orientações -->
+    <section class="orientacoes_section">
+      <div class="container">
+        <div class="section_cabecalho">
+          <span class="subtitulo">ANTES DE DESCARTAR</span>
+          <h2>Prepare seus eletrônicos</h2>
+          <p>
+            Alguns cuidados simples ajudam a garantir a segurança dos seus dados e o encaminhamento adequado dos equipamentos.
+          </p>
+        </div>
+
+        <div class="orientacoes_grid">
+          <article class="orientacao_item">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <h3>Apague seus dados</h3>
+            <p>
+              Remova informações pessoais e restaure os aparelhos antes de entregá-los.
+            </p>
+          </article>
+          <article class="orientacao_item">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <h3>Evite desmontar</h3>
+            <p>
+              Não quebre, perfure ou queime os equipamentos e suas baterias.
+            </p>
+          </article>
+          <article class="orientacao_item">
+            <i class="fa-solid fa-recycle"></i>
+            <h3>Procure locais adequados</h3>
+            <p>
+              Encaminhe os resíduos a pontos de recebimento que aceitem esse tipo de material.
+            </p>
+          </article>
+        </div>
+        <!--Fim da div orientações grid-->
+      </div>
+    </section>
+
+  </main>
+
+   <!--Rodapé-->
+  <footer class="rodape">
+    <div class="container">
+      <h3>E-Cosystem ♻</h3>
+      <p>
+        Informação e conscientização para um futuro
+        mais sustentável.
+      </p>
+      <p class="copyright">
+        © 2026 E-Cosystem | Projeto de atividade extensionista.
+      </p>
+    </div>
+  </footer>
+
+  <!--Botão para voltar ao topo da página-->
+  <a href="#topo" class="voltar_topo" aria-label="Voltar ao topo">
+    ↑
+  </a>
+
+  <!--Javascript do leaflet-->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin="">
+  </script>
+
+  <!--Javascript do mapa-->
+  <script src="js/pontos_coleta.js"></script>
+</body>
+</html>

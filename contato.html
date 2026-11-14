@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"> <!--Para ícones-->
+  <link rel="stylesheet" href="css/style_geral.css">
+  <link rel="stylesheet" href="css/contato.css">
+  <title>E-Cosystem | Contato</title>
+</head>
+<body id="topo">
+  <!--Menu principal-->
+  <header class="header">
+    <div class="container navbar">
+      <!-- Logo do site -->
+      <a href="index.html" class="logo">
+        <img src="imagens/logo.png" alt="E-Cosystem | Lixo eletrônico e sustentabilidade">
+      </a>
+      <nav class="menu" aria-label="Menu principal">
+        <a href="index.html">Início</a> <!-- A opção do menu ficará destacada de acordo com a página em que o usuário estiver-->
+        <a href="pontos_coleta.html">Pontos de coleta</a>
+        <a href="quem_somos.html">Quem somos</a>
+        <a href="contato.html" class="active">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!--Conteúdo principal do site-->
+  <main>
+    <!--Faixa de título da página-->
+    <section class="pagina_titulo">
+      <div class="container">
+        <h1>Contato</h1>
+      </div>
+    </section>
+
+    <!--Formulário de contato-->
+    <section class="section container contato_formulario">
+      <div class="contato_cabecalho">
+        <span class="subtitulo">FALE CONOSCO</span>
+        <h2>Envie sua mensagem</h2>
+        <p>
+          Tem alguma dúvida, sugestão ou gostaria de compartilhar alguma informação? Preencha o formulário abaixo.
+        </p>
+      </div>
+
+      <div class="contato_form">
+        <form action="https://formsubmit.co/ajax/eliana1234.n@gmail.com"
+              method="POST"
+              id="contatoForm"> <!--será utilizado o formsubmit para enviar os formulários para o email-->
+          <!--Configuração do envio-->
+          <input type="hidden" name="_subject" value="Nova mensagem - E-Cosystem">
+          <input type="hidden" name="_template" value="table">
+          <!--Proteção extra contra spam honeypot-->
+          <input type="text"
+                  name="_honey"
+                  style="display: none">
+          <!--Naome-->
+          <div class="campo_formulario">
+            <label for="nome">Nome completo</label>
+            <input type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome"
+                    required>
+          </div>
+          <!--Email-->
+          <div class="campo_formulario">
+            <label for="email">E-mail</label>
+            <input type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Digite seu e-mail"
+                    required>
+          </div>
+          <!--Assunto-->
+          <div class="campo_formulario">
+            <label for="assunto">Assunto</label>
+            <input type="text"
+                    id="assunto"
+                    name="assunto"
+                    placeholder="Qual o assunto da mensagem?"
+                    required>
+          </div>
+          <!--Mensagem-->
+          <div class="campo_formulario">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem"
+                      name="mensagem"
+                      rows="6"
+                      placeholder="Escreva sua mensagem..."
+                      required></textarea>
+          </div>
+          <button type="submit" class="botao_contato">
+            Enviar mensagem
+          </button>
+        </form>
+
+        <!--Mensagem de confirmação de envio-->
+        <div id="mensagemStatus"
+            class="mensagem_status"
+            role="status"
+            aria-live="polite"
+            hidden>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  
+  <!--Rodapé-->
+  <footer class="rodape">
+    <div class="container">
+      <h3>E-Cosystem ♻</h3>
+      <p>
+        Informação e conscientização para um futuro
+        mais sustentável.
+      </p>
+      <p class="copyright">
+        © 2026 E-Cosystem | Projeto de atividade extensionista.
+      </p>
+    </div>
+  </footer>
+
+  <!--Botão para voltar ao topo da página-->
+  <a href="#topo" class="voltar_topo" aria-label="Voltar ao topo">
+    ↑
+  </a>
+
+  <!--Javascript-->
+  <script src="js/contato.js"></script>
+</body>
+</html>
