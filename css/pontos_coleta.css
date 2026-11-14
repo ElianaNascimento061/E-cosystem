@@ -1,0 +1,315 @@
+/*Introdução*/
+.section_cabecalho_coleta{
+  text-align: left;
+  max-width: 100%;
+  margin: 0 auto 40px;
+}
+.section_cabecalho_coleta h2 {
+  font-size: 30px;
+  color: var(--azul);
+  margin: 10px 0;
+}
+.section_cabecalho_coleta p {
+  color: #454B50;
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+/*MAPA*/
+.mapa_container {
+  width: 100%;
+  background-color: #FFFFFF;
+  padding: 12px;
+  border: 1px solid #DCE3DD;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(30, 50, 40, 0.10);
+}
+#mapa_leaflet {
+  width: 100%;
+  height: 480px;
+  border-radius: 9px;
+  z-index: 1;
+}
+/*Ajuste dos pop-ups do leaflet*/
+.leaflet-popup-content-wrapper {
+  border-radius: 10px;
+}
+.leaflet-popup-content {
+  font-family: inherit;
+  line-height: 1.6;
+  margin: 14px;
+}
+.popup_local h3 {
+  color: var(--azul);
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+
+.popup_local p {
+  color: #526273;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.popup_local a {
+  color: var(--verde-escuro);
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: underline;
+}
+
+/*Lista dos pontos de coleta*/
+.locais_aviso {
+  display: flex;
+  align-items: flex-start; /*Alinha no início do eixo transversal*/
+  gap: 12px;
+  background-color: #E8F3EA;
+  border-left: 4px solid var(--verde);
+  border-radius: 8px;
+  padding: 18px 22px;
+  margin-bottom: 30px;
+}
+.locais_aviso i {
+  color: var(--verde-escuro);
+  font-size: 19px;
+  margin-top: 3px;
+}
+.locais_aviso p {
+  color: #344B3D;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.locais_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.local_card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #FFFFFF;
+  border: 1px solid #DCE3DD;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(30, 50, 40, 0.10);
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+.local_card:hover {
+  /*Adiciona uma animação*/
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(30, 50, 40, 0.16);
+}
+.local_icone {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E8F3EA;
+  color: var(--verde);
+  border-radius: 12px;
+  font-size: 23px;
+}
+.local_info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.local_categoria {
+  color: var(--verde);
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 7px;
+}
+.local_info h3 {
+  color: var(--azul);
+  font-size: 19px;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+.local_endereco,
+.local_numero,
+.local_email {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #454B50;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+.local_endereco i,
+.local_numero i,
+.local_email i {
+  color: var(--verde);
+  margin-top: 5px;
+}
+.local_observacao {
+  color: #626A64;
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 15px;
+}
+.local_porte{
+  display: flex;
+  align-items: flex-start;
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+.porte_pequeno {
+  background-color: #E5F0FA;
+  color: #286090;
+}
+.porte_todos {
+  background-color: #E8F3EA;
+  color: var(--verde-escuro);
+}
+.local_horario i {
+  color: var(--verde);
+}
+.local_horario {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #626A64;
+  font-size: 13px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid #E5EAE5;
+}
+.local_horario_info{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.local_horario_info p{
+  margin: 0;
+}
+
+/*O rientações sobre o descarte*/
+.orientacoes_section {
+  background-color: var(--fundo);
+  padding: 75px 0;
+}
+.orientacoes_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+.orientacao_item {
+  background-color: #FFFFFF;
+  border: 1px solid #DCE3DD;
+  border-radius: 14px;
+  padding: 28px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(30, 50, 40, 0.08);
+}
+.orientacao_item i {
+  font-size: 30px;
+  color: var(--verde);
+  margin-bottom: 15px;
+}
+.orientacao_item h3 {
+  color: var(--azul);
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.orientacao_item p {
+  color: #626A64;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/*Responsividade*/
+/*Tablet*/
+@media (max-width: 900px) {
+  .section_cabecalho_coleta h2 {
+    font-size: 27px;
+  }
+  .mapa_container {
+    padding: 9px;
+  }
+  #mapa_leaflet {
+    height: 400px;
+  }
+  .locais_grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+  .orientacoes_grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+  .local_card {
+    padding: 22px;
+  }
+}
+
+/*Celular*/
+@media (max-width: 600px) {
+  .section_cabecalho_coleta {
+    margin-bottom: 28px;
+  }
+  .section_cabecalho_coleta h2 {
+    font-size: 24px;
+  }
+  .section_cabecalho_coleta p {
+    font-size: 15px;
+  }
+  #mapa_leaflet {
+    height: 320px;
+  }
+  .mapa_container {
+    padding: 6px;
+    border-radius: 10px;
+  }
+  .locais_aviso {
+    gap: 9px;
+    padding: 14px;
+  }
+  .locais_aviso p {
+    font-size: 13px;
+  }
+  .locais_grid,
+  .orientacoes_grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .local_card {
+    padding: 20px;
+  }
+  .local_info h3 {
+    font-size: 18px;
+  }
+  .local_endereco,
+  .local_numero,
+  .local_email,
+  .local_observacao {
+    font-size: 13px;
+  }
+  .local_porte {
+    font-size: 12px;
+    max-width: 100%;
+  }
+  .local_horario {
+    align-items: flex-start;
+    font-size: 12px;
+  }
+  .orientacoes_section {
+    padding: 45px 0;
+  }
+  .orientacao_item {
+    padding: 23px 20px;
+  }
+}

@@ -1,0 +1,544 @@
+/*Banner*/
+.banner {
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(
+      97deg,
+      rgba(10, 45, 30, 0.90),
+      rgba(10, 45, 30, 0.35)
+    ), /*Adiciona um gradiente na imagem*/
+    url("../imagens/banner_site1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--verde-escuro);
+}
+.banner_conteudo {
+  color: #FFFFFF;
+  width: 90%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.banner_titulo{
+  color: var(--verde);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.banner h1 {
+  font-size: clamp(32px, 5vw, 52px);
+  max-width: 650px;
+  line-height: 1.2;
+  margin: 18px 0;
+}
+.banner p {
+  max-width: 550px;
+  font-size: 17px;
+  margin-bottom: 30px;
+  color: #F0F0F0;
+}
+.botao_primario {
+  display: inline-block;
+  background-color: var(--azul);
+  color: #FFFFFF;
+  padding: 13px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.botao_primario:hover {
+  background-color: var(--azul-vibrante);
+}
+
+/*Seção o que é lixo eletronico*/
+.conceito_conteudo,
+.dados_conteudo {
+ width: 100%;
+ margin-top: 25px;
+}
+.conceito_img,
+.dados_img {
+  float: right;
+  width: 45%;
+  margin: 0 0 20px 30px;
+}
+.conceito_img img,
+.dados_img img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  display: block;
+}
+.conceito_img figcaption,
+.dados_img figcaption,
+.dados_fonte{
+  font-size: 13px;
+  color: var(--legenda);
+  line-height: 1.5;
+  margin-top: 12px;
+}
+.conceito_texto p,
+.dados_texto p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--texto);
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/*TIPOS DE LIXO  ELETRÔNICO*/
+.categoria_lista {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+/*Itens das categorias*/
+.categoria_item{
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 18px 25px;
+  border-radius: 20px;
+  border-left: 6px solid;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease; /*ease serve pra controlar a velocidade da animação, começa devagar, acelera e termina devagar*/
+}
+.categoria_item:hover {
+  /*Adiciona um animação quando o mouse passa por cima*/
+  transform: translateY(-3px);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.09);
+}
+/*Imagens*/
+.categoria_img {
+  width: 115px;
+  height: 100px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.categoria_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+/*Textos*/
+.categoria_item.azul {
+  border-color: #0c3769;
+  background-color: #08729c;
+}
+.categoria_item.verde{
+  border-color: #063817;
+  background-color: #055738;
+}
+.categoria_item.marrom{
+  border-color: rgb(77, 56, 18);
+  background-color: rgb(107, 88, 34);
+}
+.categoria_item.branca{
+  border-color: #caceca;
+  background-color: rgb(255, 254, 254);
+}
+.categoria_info {
+  flex: 1;
+}
+.categoria_item.azul .categoria_info h3,
+.categoria_item.verde .categoria_info h3,
+.categoria_item.marrom .categoria_info h3 {
+  font-size: 20px;
+  margin-bottom: 7px;
+  color: #FFFFFF;
+}
+.categoria_item.azul .categoria_info p,
+.categoria_item.verde .categoria_info p,
+.categoria_item.marrom .categoria_info p{
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 5px;
+}
+.categoria_item.azul .categoria_info span,
+.categoria_item.verde .categoria_info span,
+.categoria_item.marrom .categoria_info span{
+  display: block;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #F2F5EF;
+}
+.categoria_item.branca .categoria_info h3{
+  font-size: 20px;
+  margin-bottom: 7px;
+  color: #343a40;
+}
+.categoria_item.branca .categoria_info p{
+  font-weight: 600;
+  color: #34465a;
+  margin-bottom: 5px;
+}
+.categoria_item.branca .categoria_info span{
+  display: block;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #536273;
+}
+
+/*Seção - impactos do lixo eletrônico*/
+/*Introdução*/
+.impactos_intro {
+  margin: 0 auto 40px;
+}
+.impactos_intro p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #454B50;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+/*Grid*/
+.impactos_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.impactos_card,
+.dados_cards,
+.reciclagem_card{
+  background-color: #FFFFFF;
+  border: 1px solid #DCE3DD;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(30, 50, 40, 0.10);
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+/*Efeito ao passar o mouse*/
+.impactos_card:hover,
+.dados_cards:hover,
+.reciclagem_card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(30, 50, 40, 0.16);
+}
+.impactos_img,
+.reciclagem_img{
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+.impactos_img img,
+.reciclagem_img img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /*Mostra a imagem inteira preservado as suas proporções*/
+  display: block;
+}
+.impactos_info,
+.reciclagem_info{
+  padding: 22px;
+}
+.impactos_info h3,
+.reciclagem_info h3{
+  color: var(--azul);
+  font-size: 19px;
+  margin-bottom: 12px;
+}
+.impactos_info p,
+.reciclagem_info p {
+  color: #526273;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/*Seção - dados de lixo eletrônico no brasil*/
+.dados_texto h3,
+.reciclagem_cuidados h3{
+  color: var(--azul);
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.dados_cabecalho p {
+  color: #454B50;
+  line-height: 1.7;
+}
+/*Cards*/
+.dados_cards_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+.dados_cards {
+  padding: 28px;
+}
+.card_icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #E8F3EA;
+  color: #2E8B57;
+  border-radius: 10px;
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+.card_numero {
+  display: block;
+  color: #2E8B57;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.dados_cards h4 {
+  color: var(--verde-escuro);
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+.dados_cards p {
+  color: #626A64;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.dados_fonte{
+  margin-bottom: 20px;
+}
+
+/*Seção - reciclagem*/
+.reciclagem_intro {
+  max-width: 100%;
+  margin: 0 auto 40px;
+}
+.reciclagem_intro p {
+  color: var(--cor-texto);
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 16px;
+}
+/*Cards*/
+.reciclagem_grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 35px;
+}
+.reciclagem_cuidados ul {
+  list-style: none;
+  padding: 0;
+}
+.reciclagem_cuidados li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 14px;
+  line-height: 1.7;
+  color: var(--cor-texto);
+}
+.reciclagem_cuidados li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: var(--cor-primaria);
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+/*Chamada para os pontos de coleta*/
+.chamada_pontos {
+  background-color: var(--verde-escuro);
+  color: #FFFFFF;
+  padding: 65px 0;
+}
+.pontos_conteudo {
+  max-width: 850px;
+  text-align: center;
+}
+.pontos_conteudo span{
+  color: var(--verde-claro);
+}
+.pontos_conteudo h2 {
+  font-size: 30px;
+  margin: 15px 0;
+}
+.pontos_conteudo p {
+  margin-bottom: 25px;
+  color: #E0EDE3;
+}
+
+/*Fontes de pesquisa*/
+.fontes_conteudo {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.fontes_conteudo h2 {
+  color: var(--cor-titulo);
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+.fontes_lista {
+  padding-left: 20px;
+  margin: 0;
+}
+.fontes_lista li {
+  color: var(--cor-texto);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+.fontes_lista a {
+  color: var(--cor-primaria);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.3s ease;
+}
+.fontes_lista a:hover {
+  color: var(--cor-titulo);
+}
+
+/*Responsividade*/
+/*Tablet*/
+@media (max-width: 900px) {
+  .banner {
+    min-height: 420px;
+    background-position: center;
+  }
+  .banner_conteudo {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+  .conceito_img,
+  .dados_img {
+    width: 42%;
+    margin-left: 22px;
+  }
+  .conceito_img img,
+  .dados_img img {
+    height: 280px;
+  }
+  .impactos_grid,
+  .dados_cards_container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .reciclagem_grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+  .impactos_img,
+  .reciclagem_img {
+    height: 180px;
+  }
+  .dados_cards {
+    padding: 23px;
+  }
+}
+
+/*Celular*/
+@media (max-width: 600px) {
+  .banner {
+    min-height: 400px;
+    background-position: 58% center;
+  }
+  .banner_conteudo {
+    width: 90%;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+  .banner_titulo {
+    font-size: 11px;
+  }
+  .banner h1 {
+    font-size: clamp(29px, 8vw, 38px);
+    line-height: 1.2;
+    margin: 14px 0;
+  }
+  .banner p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 22px;
+  }
+  .botao_primario {
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+  /*A imagem passa a ocupar uma linha inteira no celular*/
+  .conceito_img,
+  .dados_img {
+    float: none;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto 22px;
+  }
+  .conceito_img img,
+  .dados_img img {
+    height: auto;
+    max-height: 280px;
+  }
+  .conceito_texto p,
+  .dados_texto p,
+  .impactos_intro p,
+  .reciclagem_intro p {
+    font-size: 15px;
+  }
+  .categoria_item {
+    gap: 14px;
+    padding: 15px;
+    border-radius: 14px;
+  }
+  .categoria_img {
+    width: 82px;
+    height: 82px;
+  }
+  .categoria_item.azul .categoria_info h3,
+  .categoria_item.verde .categoria_info h3,
+  .categoria_item.marrom .categoria_info h3,
+  .categoria_item.branca .categoria_info h3 {
+    font-size: 17px;
+  }
+  .categoria_item.azul .categoria_info span,
+  .categoria_item.verde .categoria_info span,
+  .categoria_item.marrom .categoria_info span,
+  .categoria_item.branca .categoria_info span {
+    font-size: 14px;
+  }
+  .impactos_grid,
+  .dados_cards_container,
+  .reciclagem_grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .impactos_img,
+  .reciclagem_img {
+    height: 190px;
+  }
+  .impactos_info,
+  .reciclagem_info {
+    padding: 19px;
+  }
+  .dados_cards {
+    padding: 22px;
+  }
+  .pontos_conteudo {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .pontos_conteudo h2 {
+    font-size: 25px;
+  }
+  .pontos_conteudo p {
+    font-size: 15px;
+  }
+  .fontes_lista {
+    padding-left: 18px;
+  }
+  .fontes_lista li {
+    overflow-wrap: anywhere;
+    font-size: 14px;
+  }
+}

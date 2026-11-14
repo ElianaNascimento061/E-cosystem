@@ -1,0 +1,278 @@
+/* Seção apresentação do ecosystem */
+.apresentacao_conteudo {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+.apresentacao_texto {
+  flex: 1;
+}
+.apresentacao_texto h2 {
+  color: var(--azul);
+  font-size: 30px;
+  margin: 10px 0 20px;
+}
+.apresentacao_texto p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+.apresentacao_img {
+  flex: 1;
+}
+.apresentacao_img img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}
+.apresentacao_img figcaption {
+  font-size: 13px;
+  color: var(--legenda);
+  margin-top: 10px;
+  text-align: center;
+}
+
+/*Seção sobre o projeto*/
+.sobre_projeto_texto {
+  max-width: 100%;
+  margin: 0 auto 50px;
+}
+.sobre_projeto_texto p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 16px;
+  text-align: justify;
+}
+.objetivos_projeto {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+}
+.objetivo_item {
+  background-color: #fff;
+  padding: 28px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid var(--verde);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/*Adiciona ua animação*/
+.objetivo_item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+.objetivo_item h3 {
+  font-size: 19px;
+  color: var(--azul);
+  margin-bottom: 12px;
+}
+.objetivo_item p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #666;
+  margin: 0;
+}
+
+/*ODS*/
+.ods_projeto {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.ods_texto {
+  max-width: 100%;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+.ods_texto p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  text-align: justify;
+}
+
+/*Cards*/
+.ods_cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+.ods_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+  border: 1px solid #e8edf3;
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+/*Adiciona animação ao card*/
+.ods_item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+}
+.ods_item img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+.ods_item_texto h3 {
+  font-size: 20px;
+  color: #315f91;
+  margin-bottom: 15px;
+}
+.ods_item_texto p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #555;
+  margin: 0;
+}
+
+/*Seção autora do site*/
+.desenvolvedora {
+  padding-top: 70px;
+  padding-bottom: 80px;
+}
+.desenvolvedora_conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 55px;
+  max-width: 900px;
+  margin: 45px auto 0;
+}
+.desenvolvedora_imagem {
+  flex: 0 0 280px;
+  height: 340px;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.13);
+}
+.desenvolvedora_imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.desenvolvedora_texto {
+  flex: 1;
+}
+.desenvolvedora_texto h3 {
+  font-size: 25px;
+  color: #315f91;
+  margin-bottom: 10px;
+}
+.desenvolvedora_curso {
+  display: inline-block;
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 22px;
+}
+.desenvolvedora_texto p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+/*Responsividade*/
+/*Tablet*/
+@media (max-width: 900px) {
+  .apresentacao_conteudo {
+    gap: 28px;
+  }
+  .apresentacao_texto h2 {
+    font-size: 27px;
+  }
+  .apresentacao_img img {
+    height: 320px;
+  }
+  .objetivos_projeto {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+  .ods_cards {
+    gap: 20px;
+  }
+  .desenvolvedora_conteudo {
+    gap: 35px;
+  }
+  .desenvolvedora_imagem {
+    flex-basis: 240px;
+    height: 310px;
+  }
+}
+
+/*Celular*/
+@media (max-width: 600px) {
+  .apresentacao_conteudo {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 25px;
+  }
+  .apresentacao_texto h2 {
+    font-size: 25px;
+  }
+  .apresentacao_texto p,
+  .sobre_projeto_texto p,
+  .ods_texto p,
+  .desenvolvedora_texto p {
+    font-size: 15px;
+  }
+  .apresentacao_img img {
+    height: auto;
+    max-height: 300px;
+  }
+  .objetivos_projeto,
+  .ods_cards {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .objetivo_item {
+    padding: 23px 20px;
+  }
+  .ods_projeto {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+  .ods_item {
+    padding: 25px 20px;
+  }
+  .ods_item img {
+    width: 105px;
+    height: 105px;
+  }
+  .desenvolvedora {
+    padding-top: 45px;
+    padding-bottom: 50px;
+  }
+  .desenvolvedora_conteudo {
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 30px;
+  }
+  .desenvolvedora_imagem {
+    flex: none;
+    width: min(100%, 260px);
+    height: 300px;
+    margin: 0 auto;
+  }
+  .desenvolvedora_texto {
+    width: 100%;
+  }
+  .desenvolvedora_texto h3 {
+    font-size: 22px;
+  }
+}

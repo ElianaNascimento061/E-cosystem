@@ -1,0 +1,141 @@
+.contato_formulario {
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+.contato_cabecalho {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+.contato_cabecalho h2 {
+  color: #347CA5;
+  font-size: 30px;
+  margin: 10px 0 15px;
+}
+.contato_cabecalho p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/*Formulário*/
+.contato_form{
+  background-color: #fff;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+}
+.campo_formulario {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 22px;
+}
+.campo_formulario label {
+  color: #333;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 9px;
+}
+.campo_formulario input,
+.campo_formulario textarea {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid #d5dce2;
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 15px;
+  color: #333;
+  background-color: #fafafa;
+  outline: none;
+  transition: border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+.campo_formulario input {
+  height: 48px;
+}
+.campo_formulario textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+/*Adiciona efeito quando seleciona os campos*/
+.campo_formulario input:focus,
+.campo_formulario textarea:focus {
+  border-color: #347CA5;
+  box-shadow: 0 0 0 3px rgba(52, 124, 165, 0.12);
+  background-color: #fff;
+}
+/*Botão*/
+.botao_contato {
+  width: 100%;
+  padding: 14px;
+  background-color: #347CA5;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease,
+              transform 0.3s ease;
+}
+.botao_contato:hover {
+  background-color: #286487;
+  transform: translateY(-2px);
+}
+
+/*Responsividade*/
+/*Tablet*/
+@media (max-width: 900px) {
+  .contato_formulario {
+    padding-top: 50px;
+    padding-bottom: 65px;
+  }
+  .contato_form {
+    max-width: 650px;
+    padding: 32px;
+  }
+}
+
+/*Celular*/
+@media (max-width: 600px) {
+  .contato_formulario {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+  .contato_cabecalho {
+    margin-bottom: 28px;
+  }
+  .contato_cabecalho h2 {
+    font-size: 25px;
+  }
+  .contato_cabecalho p {
+    font-size: 14px;
+  }
+  .contato_form {
+    width: 100%;
+    padding: 23px 18px;
+    border-radius: 10px;
+  }
+  .campo_formulario {
+    margin-bottom: 18px;
+  }
+  .campo_formulario label {
+    font-size: 14px;
+  }
+  .campo_formulario input,
+  .campo_formulario textarea {
+    font-size: 16px;
+    padding: 12px;
+  }
+  .botao_contato {
+    padding: 13px;
+    font-size: 15px;
+  }
+  .mensagem_status {
+    font-size: 14px;
+    padding: 13px;
+  }
+}
